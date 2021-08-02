@@ -16,28 +16,30 @@ namespace eureka_blocks_car {
 export function car_derection_time(sinkou_houkou: direction, time_sec: number): void {
     switch (sinkou_houkou) {
         case direction.前:
-            maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100)
-            basic.pause(time_sec * 1000)
-            maqueen.motorStop(maqueen.Motors.All)
-
+            maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, 100);
+            basic.pause(time_sec * 1000);
+            maqueen.motorStop(maqueen.Motors.All);
+            basic.pause(100);
+            break;
 
 
         case direction.左:
-            maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 0)
-            maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 100)
-            basic.pause(time_sec * 1000)
-            maqueen.motorStop(maqueen.Motors.All)
-
+            maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 0);
+            maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 100);
+            basic.pause(time_sec * 1000);
+            maqueen.motorStop(maqueen.Motors.All);
+            basic.pause(100);
             break;
         case direction.右:
-            maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 100)
-            maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 0)
-            basic.pause(time_sec * 1000)
-            maqueen.motorStop(maqueen.Motors.All)
+            maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, 100);
+            maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, 0);
+            basic.pause(time_sec * 1000);
+            maqueen.motorStop(maqueen.Motors.All);
+            basic.pause(100);
             break;
         case direction.止まる:
-            maqueen.motorStop(maqueen.Motors.All)
-
+            maqueen.motorStop(maqueen.Motors.All);
+            basic.pause(100);
             break;
     }
 }
