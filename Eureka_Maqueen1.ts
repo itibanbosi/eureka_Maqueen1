@@ -12,7 +12,7 @@ namespace eureka_blocks_car {
 
 
 //% color="#3943c6" weight=70　blockId=servos_direction
-//% block="進行方向 |%sinkou_houkou| 動作時間|%time_sec| 秒" group="2　基本の動き"
+//% block="|%sinkou_houkou|へ |%time_sec| 秒間進む" group="2　基本の動き"
 export function car_derection_time(sinkou_houkou: direction, time_sec: number): void {
     switch (sinkou_houkou) {
         case direction.前:
