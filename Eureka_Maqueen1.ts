@@ -5,14 +5,11 @@ enum direction {
     止まる,
 }
 
-//% color="#3943c6" block="ﾕｰﾚｶ･ｶｰVer1.3" icon="\uf1b9"
+//% color="#3943c6" block="Eureka Maqueen" icon="\uf1b9"
 
 namespace eureka_blocks_car {
-
-
-
 //% color="#3943c6" weight=70　blockId=servos_direction
-//% block="|%sinkou_houkou|へ |%time_sec| 秒間進む 出力 |%Power|" group="2　基本の動き"
+//% block="|%sinkou_houkou|へ |%time_sec|秒間進む 出力|%Power|" group="2　基本の動き"
 //% advanced=true
 //% Power.min=0 Power.max=255
 export function car_derection_time(sinkou_houkou: direction, time_sec: number,Power:number): void {
